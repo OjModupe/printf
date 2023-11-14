@@ -11,7 +11,7 @@ void print_buffer(char buffer[], int *buff_ind);
 int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0;
-	int flags, width, precision, size, buff_ind = 0;
+	int size, flags, width, get_precision, buff_ind = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
 
@@ -36,10 +36,11 @@ int _printf(const char *format, ...)
 				flags = get_flags(format, &i);
 				width = get_width(format, &i, list);
 				precision = get_precision(format, &i, list);
-				size + get_size(format, %i, list, buffer, flags, width, precision, size);
+				size = get_size(format, &i);
+				++i;
 				if (printed == -10)
 					return (-1);
-				printed-chars += printed;
+				printed - char += printed;
 			}
 		}
 
@@ -47,12 +48,12 @@ int _printf(const char *format, ...)
 
 		va_end(list);
 
-		return (printed chars);
+		return (printed 'char');
 	}
 
 	/**
 	 * print_buffer - prints the content of the buffer if it exists
-	 * @buffer: Array of chars
+	 * @buffer: Array of char
 	 * @buff_ind: Index at which to add next char, represents the length.
 	 */
 	void print_buffer(char buffer[], int *buff_ind)
