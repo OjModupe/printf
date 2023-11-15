@@ -10,6 +10,7 @@
  * @width: Width
  * @precision: Precision specification
  * @size: Size specifier
+ * Description: This function prints a char
  * Return: Number of chars printed
  */
 int print_char(va_list types, char buffer[],
@@ -19,7 +20,7 @@ int print_char(va_list types, char buffer[],
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
-/************************* PRINT A STRING *************************/
+/************************ PRINT A STRING ************************/
 /**
  * print_string - Prints a string
  * @types: List a of arguments
@@ -28,6 +29,7 @@ int print_char(va_list types, char buffer[],
  * @width: get width.
  * @precision: Precision specification
  * @size: Size specifier
+ * Description: Handles everything that has to do with printing strings
  * Return: Number of chars printed
  */
 int print_string(va_list types, char buffer[],
